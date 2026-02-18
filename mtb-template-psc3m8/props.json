@@ -1,0 +1,68 @@
+{
+    "core": {
+        "id": "62648b6c-6fa6-540b-a233-6b3e6a1ea5b9",
+        "name": "mtb-template-psc3m8",
+        "version": "1.0.0.48619"
+    },
+    "opt": {
+        "props": {
+            "TemplateData": {
+                "BOY4": {
+                    "components": "psc3m8_components",
+                    "defines": [
+                        "hal_defines",
+                        "psc3m8_defines"
+                    ],
+                    "deps": "psc3m8_dependencies",
+                    "files": [
+                        "filelist/psc3m8.txt"
+                    ],
+                    "files_init": "filelist/init_psc3m8.txt"
+                },
+                "udd_key": "DeviceDie"
+            },
+            "component_sets": {
+                "psc3m8_components": []
+            },
+            "define_sets": {
+                "hal_defines": [
+                    {
+                        "description": "Option to indicate that the Hardware Abstraction Layer APIs are expected to be used. This will cause the BSP to add calls to initialize the system functions.",
+                        "display": "Using HAL interface",
+                        "options": [
+                            {
+                                "default": true,
+                                "define": "COMPONENT_MTB_HAL",
+                                "display": "COMPONENT_MTB_HAL",
+                                "value": ""
+                            }
+                        ],
+                        "type": "choice"
+                    }
+                ],
+                "psc3m8_defines": [
+                    {
+                        "description": "PLACEHOLDER:FLASH_BOOT",
+                        "display": "PLACEHOLDER:FLASH_BOOT",
+                        "options": [
+                            {
+                                "default": true,
+                                "define": "FLASH_BOOT",
+                                "display": "FLASH_BOOT",
+                                "value": ""
+                            }
+                        ],
+                        "type": "choice"
+                    }
+                ]
+            },
+            "dependency_sets": {
+                "psc3m8_dependencies": [
+                    "deps/core-lib.mtbx",
+                    "deps/core-make.mtbx",
+                    "deps/mtb-dsl-psc3m8.mtbx"
+                ]
+            }
+        }
+    }
+}
